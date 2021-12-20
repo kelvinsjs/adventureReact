@@ -1,17 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import Header from "./components/Header";
+import Camping from "./components/Camping";
+import properties from "./assets/properties";
+import Poster from "./components/Poster";
+import Campsites from "./components/Campsites";
+import Explores from "./components/Explores";
+import Footer from "./components/Footer";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <Header/>
+        <Camping camping={properties}/>
+        <Poster/>
+        <Campsites camps={properties}/>
+        <Explores explore={properties}/>
+        <Footer/>
+    </React.StrictMode>,
+    document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

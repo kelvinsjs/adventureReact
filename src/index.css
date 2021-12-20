@@ -1,13 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "VDrink";
+    src: url("./assets/fonts/VDrink.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "VDrink";
+    src: url("./assets/fonts/VDrinkBold.otf") format("opentype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(90, 90, 90);
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.end-section {
+    position: relative;
+}
+
+.end-section:after {
+    position: absolute;
+    content: "";
+    height: 110px;
+    width: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #e7e7e7;
+}
+
+.dv-section__title {
+    font-size: 80px;
+    font-family: "VDrink";
+    text-align: center;
+    text-transform: uppercase;
+    color: #5b5b43;
+    word-spacing: 41944px;
+    line-height: 0.8;
+    margin-bottom: 50px;
+    letter-spacing: 15px;
+}
+
+.dv-main-section {
+    padding-top: 125px;
+}
+
+ul {
+    list-style: none;
+}
+ul li a {
+    display: flex;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
 }
